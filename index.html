@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperClock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="alarm" class="navItem">Alarm</div>
+        <div id="clock" class="navItem">Clock</div>
+        <div id="stopwatch" class="navItem">Stopwatch</div>
+        <div id="timer" class="navItem">Timer</div>
+    </div>
+    <div id="container">
+        <div id="alarmDiv" class="box">
+            <div class="time">
+                <input placeholder="12" type="number" id="alarmHours">
+                <span class="spn">:</span>
+                <input placeholder="00" type="number" id="alarmMinutes">
+                <span class="spn">:</span>
+                <input placeholder="00" type="number" id="alarmSeconds">
+                <input type="radio" name="meridiem" value="AM" id="am"
+                    class="radioInput" checked>
+                <label for="am">AM</label>
+                <input type="radio" name="meridiem" value="PM" id="pm"
+                    class="radioInput">
+                <label for="pm">PM</label>
+            </div>
+            <div class="buttons">
+                <button id="setAlarm" class="btn wideBtn">Set Alarm</button>
+                <button id="clearAlarm" class="btn wideBtn" disabled>Clear
+                    Alarm</button>
+            </div>
+        </div>
+        <div id="clockDiv" class="box"></div>
+        <div id="stopwatchDiv" class="box">
+            <div class="time">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+                <span>:</span>
+                <span id="centiSeconds">00</span>
+            </div>
+            <div class="buttons">
+                <button id="startStopwatch" class="btn">Start</button>
+                <button id="pauseStopwatch" class="btn" disabled>Pause</button>
+                <button id="resetStopwatch" class="btn" disabled>Reset</button>
+            </div>
+        </div>
+        <div id="timerDiv" class="box">
+            <div class="time">
+                <input placeholder="00" type="number" id="timerHours">
+                <span class="spn">:</span>
+                <input placeholder="00" type="number" id="timerMinutes">
+                <span class="spn">:</span>
+                <input placeholder="00" type="number" id="timerSeconds">
+            </div>
+            <div class="buttons">
+                <button id="startTimer" class="btn">Start</button>
+                <button id="pauseTimer" class="btn" disabled>Pause</button>
+                <button id="resetTimer" class="btn" disabled>Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
